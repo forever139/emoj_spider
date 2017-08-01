@@ -7,12 +7,12 @@ from sqlalchemy.sql import text
 
 class EmojSpiderPipeline(object):
     emoj_sql_template = """
-    INSERT INTO emoj (title, image_url, source_url, created_at, updated_at)
-    VALUES (:title, :image_url, :source_url, now(), now())
+    INSERT INTO emoj (title, image_url, image_backup_url, created_at, updated_at)
+    VALUES (:title, :image_url, :image_backup_url, now(), now())
     on conflict (image_url) do update set
     title = EXCLUDED.title,
     image_url = EXCLUDED.image_url,
-    source_url = EXCLUDED.source_url,
+    image_backup_url = EXCLUDED.image_backup_url,
     updated_at = EXCLUDED.updated_at
     """
     def __init__(self, settings):
