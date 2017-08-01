@@ -1,0 +1,43 @@
+
+*.py[cod]
+*$py.class
+
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+*.log
+logs/
+local_settings.py
+
+
+# Scrapy stuff:
+.scrapy
+
+# pyenv
+.python-version
+
+# dotenv
+.env
+
+# virtualenv
+.venv/
+venv/
+ENV/
+
+
+# images
+images/
